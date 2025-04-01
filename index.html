@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma Web Radio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: blue;
+    }
+    audio {
+      display: block;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue sur Ma Web Radio</h1>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#interviews">Interviews</a>
+  </nav>
+  <section id="accueil">
+    <p>Écoutez vos interviews préférées et découvrez des exclusivités ici !</p>
+  </section>
+  <section id="interviews">
+    <h2>Liste des Interviews</h2>
+    <!-- JavaScript ajoutera les lecteurs ici -->
+    <div id="interview-list"></div>
+  </section>
+  <script>
+    // Charger dynamiquement les interviews
+    const interviews = [
+      { title: "Interview 1", src: "interview/interview1.mp3" },
+      { title: "Interview 2", src: "interview/interview2.mp3" }
+    ];
+
+    const interviewList = document.getElementById('interview-list');
+    interviews.forEach(interview => {
+      const audioElement = document.createElement('audio');
+      audioElement.controls = true;
+      audioElement.src = interview.src;
+
+      const titleElement = document.createElement('p');
+      titleElement.textContent = interview.title;
+
+      interviewList.appendChild(titleElement);
+      interviewList.appendChild(audioElement);
+    });
+  </script>
+</body>
+</html>
