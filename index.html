@@ -1,61 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ma Web Radio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
-    nav {
-      margin-bottom: 20px;
-    }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: blue;
-    }
-    audio {
-      display: block;
-      margin: 10px auto;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les p'tite tête - Web Radio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #ff5722;
+            color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        section {
+            margin: 20px;
+        }
+        audio {
+            margin: 10px;
+        }
+        .interview-space {
+            margin-top: 30px;
+            background-color: #e0e0e0;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-  <h1>Bienvenue sur Ma Web Radio</h1>
-  <nav>
-    <a href="#accueil">Accueil</a>
-    <a href="#interviews">Interviews</a>
-  </nav>
-  <section id="accueil">
-    <p>Écoutez vos interviews préférées et découvrez des exclusivités ici !</p>
-  </section>
-  <section id="interviews">
-    <h2>Liste des Interviews</h2>
-    <!-- JavaScript ajoutera les lecteurs ici -->
-    <div id="interview-list"></div>
-  </section>
-  <script>
-    // Charger dynamiquement les interviews
-    const interviews = [
-      { title: "Interview 1", src: "interview/interview1.mp3" },
-      { title: "Interview 2", src: "interview/interview2.mp3" }
-    ];
+    <header>
+        <h1>Les p'tite tête - Web Radio</h1>
+        <p>Bienvenue sur notre web radio ! Écoutez nos morceaux et nos interviews.</p>
+    </header>
 
-    const interviewList = document.getElementById('interview-list');
-    interviews.forEach(interview => {
-      const audioElement = document.createElement('audio');
-      audioElement.controls = true;
-      audioElement.src = interview.src;
+    <section id="audio-player">
+        <h2>Morceaux</h2>
+        <div>
+            <!-- Exemple de fichiers audio -->
+            <audio controls>
+                <source src="https://URL_de_votre_repository/interwiou/morceau1.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas les lecteurs audio.
+            </audio>
+            <p>Morceau 1</p>
+        </div>
+        <div>
+            <audio controls>
+                <source src="https://URL_de_votre_repository/interwiou/morceau2.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas les lecteurs audio.
+            </audio>
+            <p>Morceau 2</p>
+        </div>
+    </section>
 
-      const titleElement = document.createElement('p');
-      titleElement.textContent = interview.title;
-
-      interviewList.appendChild(titleElement);
-      interviewList.appendChild(audioElement);
-    });
-  </script>
+    <section class="interview-space">
+        <h2>Interviews</h2>
+        <p>Retrouvez ici toutes nos interviews !</p>
+        <div>
+            <!-- Exemple de fichiers audio pour les interviews -->
+            <audio controls>
+                <source src="https://URL_de_votre_repository/interwiou/interview1.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas les lecteurs audio.
+            </audio>
+            <p>Interview avec Alice</p>
+        </div>
+        <div>
+            <audio controls>
+                <source src="https://URL_de_votre_repository/interwiou/interview2.mp3" type="audio/mpeg">
+                Votre navigateur ne supporte pas les lecteurs audio.
+            </audio>
+            <p>Interview avec Bob</p>
+        </div>
+    </section>
 </body>
 </html>
