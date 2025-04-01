@@ -3,45 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Web radio Les p'tite tête - Écoutez nos morceaux et interviews exclusives.">
-    <title>Les p'tite tête - Web Radio</title>
+    <title>Les p'tite tête - Accueil</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             background-color: #121212;
             color: #f4f4f4;
+            text-align: center;
         }
         header {
             background-color: #ff5722;
             color: #fff;
             padding: 20px;
-            text-align: center;
         }
-        nav {
-            background-color: #333;
-            padding: 15px;
-            text-align: center;
+        .main-content {
+            margin: 50px;
         }
-        nav a {
+        a {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 25px;
+            background-color: #ff5722;
             color: #fff;
-            margin: 0 15px;
             text-decoration: none;
-            font-weight: bold;
+            border-radius: 5px;
+            font-size: 18px;
         }
-        nav a:hover {
-            color: #ff5722;
-        }
-        section {
-            padding: 20px;
-            text-align: center;
-        }
-        .options {
-            margin-top: 30px;
-        }
-        .audio-player {
-            margin: 20px auto;
-            max-width: 400px;
+        a:hover {
+            background-color: #e64a19;
         }
     </style>
 </head>
@@ -50,38 +40,10 @@
         <h1>Les p'tite tête - Web Radio</h1>
         <p>Avec les p'tite tête, vous serez moins bête !</p>
     </header>
-    <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#morceaux">Morceaux</a>
-        <a href="#interviews">Interviews</a>
-    </nav>
-    <section id="accueil">
-        <h2>Bienvenue sur Les p'tite tête</h2>
-        <p>Explorez notre web radio ! Choisissez une option ci-dessus pour commencer :</p>
-        <div class="options">
-            <a href="#morceaux" style="color: #ff5722; font-size: 18px;">🎵 Écouter les morceaux</a><br>
-            <a href="#interviews" style="color: #ff5722; font-size: 18px;">🎙️ Découvrir les interviews</a>
-        </div>
-    </section>
-    <section id="morceaux">
-        <h2>Morceaux en cours</h2>
-        <div class="audio-player">
-            <audio controls>
-                <source src="https://URL_de_votre_repository/interwiou/morceau1.mp3" type="audio/mpeg">
-                Votre navigateur ne supporte pas les lecteurs audio.
-            </audio>
-            <p>Titre : Morceau 1</p>
-        </div>
-    </section>
-    <section id="interviews">
-        <h2>Interviews</h2>
-        <div class="audio-player">
-            <audio controls>
-                <source src="https://URL_de_votre_repository/interwiou/interview1.mp3" type="audio/mpeg">
-                Votre navigateur ne supporte pas les lecteurs audio.
-            </audio>
-            <p>Interview : Alice</p>
-        </div>
+    <section class="main-content">
+        <h2>Bienvenue !</h2>
+        <p>Choisissez une option pour explorer notre web radio :</p>
+        <a href="interviews.html">🎙️ Interviews</a>
     </section>
 </body>
 </html>
